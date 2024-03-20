@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class DashboardPage {
-    public DashboardPage() {
+public class DashboardPage_Cetin {
+    public DashboardPage_Cetin() {
 
         PageFactory.initElements(Driver.getDriver(), this);
 
@@ -65,7 +65,7 @@ public class DashboardPage {
 
     public static void verifySetStatus(String status) {
 
-        DashboardPage page = new DashboardPage();
+        DashboardPage_Cetin page = new DashboardPage_Cetin();
 
         if (status.equalsIgnoreCase("Online")) {
             page.setStatusButton.click();
