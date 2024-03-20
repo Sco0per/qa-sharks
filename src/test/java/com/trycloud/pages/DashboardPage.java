@@ -59,6 +59,9 @@ public class DashboardPage {
     @FindBy(xpath = "//label[@class='user-status-online-select__label icon-user-status-invisible']")
     public WebElement invisibleButton;
 
+    @FindBy(linkText = "Talk")
+    public WebElement talkModule;
+
 
     public static void verifySetStatus(String status) {
 
