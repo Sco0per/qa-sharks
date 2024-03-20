@@ -20,9 +20,11 @@ import java.util.List;
 public abstract class BasePage {
 
 
-/*
-    Fot this Base page , we can come all together and create common methods and web elements , or if you think there is something will be usefull for other team mates you can put it here.
+/**
+    Fot this Base page , we can come all together and create common methods and web elements , or if you think there is something will be usefull for other teammates you can put it here.
  */
+
+
 
     }
 
