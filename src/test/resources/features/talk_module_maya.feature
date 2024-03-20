@@ -1,10 +1,15 @@
+@wip_maya
 Feature: Talk Module Functionality (Automation)
 
   Agile story:
   As a user, I should be able to create a new conversation, add participant under the Talk module
 
+  Background: User is already in the log in page
+    Given the user is on the login page
+    Then the user logged in with username as "User22" and password as "Userpass123"
+
+
   Scenario: User can create a new conversation by adding any selected participant
-    Given user logged in and in the dashboard page
     When user navigates and clicks on Talk Module icon
     Then talk module page opens
     When user inters a participant and clicks the add button
