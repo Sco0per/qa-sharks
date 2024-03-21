@@ -3,7 +3,6 @@ package com.trycloud.pages;
 
 
 
-import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -20,9 +19,15 @@ import java.util.List;
 public abstract class BasePage {
 
 
-/*
-    Fot this Base page , we can come all together and create common methods and web elements , or if you think there is something will be usefull for other team mates you can put it here.
+/**
+    Fot this Base page , we can come all together and create common methods and web elements , or if you think there is something will be usefull for other teammates you can put it here.
  */
+
+
+
+    public static void clickModule(String moduleName) {
+        Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[@data-id='"+moduleName+"']")).click();
+    }
 
     }
 
