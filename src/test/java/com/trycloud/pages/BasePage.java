@@ -3,7 +3,6 @@ package com.trycloud.pages;
 
 
 
-import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -25,6 +24,10 @@ public abstract class BasePage {
  */
 
 
+
+    public static void clickModule(String moduleName) {
+        Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[@data-id='"+moduleName+"']")).click();
+    }
 
     }
 
