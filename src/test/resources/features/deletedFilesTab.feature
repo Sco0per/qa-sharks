@@ -4,7 +4,7 @@ Feature: Default
 	Background:
 		#@B32G22-259
 		Given the user is on the login page
-		Then the user logged in with username as "User15" and password as "Userpass123"
+		Then the user logged in with username as "User22" and password as "Userpass123"
 		#@B32G22-260
 		Given user is already on Files page
 		#@B32G22-261
