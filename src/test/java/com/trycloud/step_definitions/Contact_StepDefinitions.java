@@ -2,12 +2,21 @@ package com.trycloud.step_definitions;
 
 import com.trycloud.pages.ContactPage;
 import com.trycloud.utilities.BrowserUtils;
+import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+import static java.time.Duration.*;
 
 public class Contact_StepDefinitions {
 
@@ -94,8 +103,11 @@ public class Contact_StepDefinitions {
     }
     @Then("user should not see the contact in the list")
     public void user_should_not_see_the_contact_in_the_list()  {
-        BrowserUtils.sleep(2);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(text(),'test1')]")));
+        //BrowserUtils.sleep(2);
         BrowserUtils.verifyElementNotDisplayed(By.xpath("//*[contains(text(),'test1')]"));
+
     }
 
 }
