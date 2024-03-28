@@ -11,6 +11,7 @@ import java.util.List;
 public class FilesPage extends BasePage {
 
     public FilesPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
